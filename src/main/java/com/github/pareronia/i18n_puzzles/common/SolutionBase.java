@@ -27,7 +27,7 @@ public abstract class SolutionBase<Output> implements LoggerEnabled {
         final String[] split = name.substring(name.length() - 7).split("_");
         this.year = Integer.parseInt(split[0]);
         this.day = Integer.parseInt(split[1]);
-        this.title = "i18n-puzzles.com %d Day %d".formatted(this.year, this.day);
+        this.title = "i18n-puzzles.com %d Day %-2d".formatted(this.year, this.day);
         this.debug = debug;
         this.charset = charset;
         this.logger = new Logger(debug);
