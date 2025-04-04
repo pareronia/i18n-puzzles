@@ -13,7 +13,7 @@
 |[8](https://i18n-puzzles.com/puzzle/8)|[👑](src/main/java/com/github/pareronia/i18n_puzzles/Puzzle2025_08.java)|
 |[9](https://i18n-puzzles.com/puzzle/9)|[👑](src/main/java/com/github/pareronia/i18n_puzzles/Puzzle2025_09.java)|
 |[10](https://i18n-puzzles.com/puzzle/10)|[👑](src/main/java/com/github/pareronia/i18n_puzzles/Puzzle2025_10.java)|
-|[11](https://i18n-puzzles.com/puzzle/11)||
+|[11](https://i18n-puzzles.com/puzzle/11)|[👑](src/main/java/com/github/pareronia/i18n_puzzles/Puzzle2025_11.java)|
 |[12](https://i18n-puzzles.com/puzzle/12)||
 |[13](https://i18n-puzzles.com/puzzle/13)||
 |[14](https://i18n-puzzles.com/puzzle/14)||
