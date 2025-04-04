@@ -1,8 +1,8 @@
 [Internationali­zation Puzzles](https://i18n-puzzles.com/)
 
 <!-- @BEGIN:Puzzles -->
-| Puzzle | java |
-| --- | --- |
+| Puzzle | ![](https://progress-bar.xyz/13?title=java&scale=20&suffix=/20&progress_background=ff3300) |
+| :---: | :---: |
 |[1](https://i18n-puzzles.com/puzzle/1)|[👑](src/main/java/com/github/pareronia/i18n_puzzles/Puzzle2025_01.java)|
 |[2](https://i18n-puzzles.com/puzzle/2)|[👑](src/main/java/com/github/pareronia/i18n_puzzles/Puzzle2025_02.java)|
 |[3](https://i18n-puzzles.com/puzzle/3)|[👑](src/main/java/com/github/pareronia/i18n_puzzles/Puzzle2025_03.java)|
