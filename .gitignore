@@ -1,4 +1,6 @@
 .env
+build
+lib
 
 ##
 ## Vim
@@ -42,6 +44,19 @@ bin-test/
 *.jar
 .cache/pmd
 htmlpmd/
+
+##
+## Python
+##
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.mypy_cache
+.ropeproject
+.venv
 
 ##
 ## VSCode

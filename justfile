@@ -1,7 +1,7 @@
 set dotenv-load
 set dotenv-required
 
-alias r := run
+alias r := run-all
 
 java_src_dir := join(".", "src", "main", "java")
 java_srcs := shell('find . -name "*.java" | tr "\n" " "')
@@ -12,6 +12,11 @@ javac := env("JAVAC_EXE")
 java := env("JAVA_EXE")
 java_lib_dir := env("JAVA_LIB_DIR")
 java_libs := join(java_lib_dir, "spring-security-crypto-6.4.4.jar")
+
+python_src_dir := join(".", "src", "main", "python")
+export PYTHONPATH := python_src_dir
+python := if os_family() == "windows" { "python -O" } else { "python3 -O" }
+
 rmdir := "rm --recursive --force"
 maven_repo := "https://repo1.maven.org/maven2"
 wget := "wget --no-verbose --no-clobber"
@@ -34,3 +39,6 @@ run-all:
 
 clean-java:
     @{{rmdir}} {{java_dst}} {{java_lib_dir}}
+
+table:
+    @{{python}} -m table README.md && git diff README.md
