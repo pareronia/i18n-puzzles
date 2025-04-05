@@ -1,0 +1,20 @@
+# https://github.com/skywind3000/asynctasks.vim
+#
+
+[file-run-dev]
+command:python=just vim-file-run-dev $(VIM_FILEPATH)
+cwd=<root>
+output=terminal
+pos=right
+
+[file-run]
+command:python=just vim-file-run $(VIM_FILEPATH)
+cwd=<root>
+output=terminal
+pos=right
+
+[file-debug]
+command:python=just vim-file-debug $(VIM_FILEPATH)
+cwd=<root>
+output=terminal
+pos=vim
