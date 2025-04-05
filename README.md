@@ -1,11 +1,11 @@
 [Internationali­zation Puzzles](https://i18n-puzzles.com/)
 
 <!-- @BEGIN:Puzzles -->
-| Puzzle | ![](https://progress-bar.xyz/15?title=java&scale=20&suffix=/20&progress_background=ff3300) | ![](https://progress-bar.xyz/2?title=python3&scale=20&suffix=/20&progress_background=ff3300) |
+| Puzzle | ![](https://progress-bar.xyz/15?title=java&scale=20&suffix=/20&progress_background=ff3300) | ![](https://progress-bar.xyz/3?title=python3&scale=20&suffix=/20&progress_background=ff3300) |
 | :---: | :---: | :---: |
 |[1](https://i18n-puzzles.com/puzzle/1)|[👑](src/main/java/com/github/pareronia/i18n_puzzles/Puzzle2025_01.java)|[👑](src/main/python/Puzzle2025_01.py)|
 |[2](https://i18n-puzzles.com/puzzle/2)|[👑](src/main/java/com/github/pareronia/i18n_puzzles/Puzzle2025_02.java)|[👑](src/main/python/Puzzle2025_02.py)|
-|[3](https://i18n-puzzles.com/puzzle/3)|[👑](src/main/java/com/github/pareronia/i18n_puzzles/Puzzle2025_03.java)||
+|[3](https://i18n-puzzles.com/puzzle/3)|[👑](src/main/java/com/github/pareronia/i18n_puzzles/Puzzle2025_03.java)|[👑](src/main/python/Puzzle2025_03.py)|
 |[4](https://i18n-puzzles.com/puzzle/4)|[👑](src/main/java/com/github/pareronia/i18n_puzzles/Puzzle2025_04.java)||
 |[5](https://i18n-puzzles.com/puzzle/5)|[👑](src/main/java/com/github/pareronia/i18n_puzzles/Puzzle2025_05.java)||
 |[6](https://i18n-puzzles.com/puzzle/6)|[👑](src/main/java/com/github/pareronia/i18n_puzzles/Puzzle2025_06.java)||
