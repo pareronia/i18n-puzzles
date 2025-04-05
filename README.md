@@ -1,7 +1,7 @@
 [Internationali­zation Puzzles](https://i18n-puzzles.com/)
 
 <!-- @BEGIN:Puzzles -->
-| Puzzle | ![](https://progress-bar.xyz/13?title=java&scale=20&suffix=/20&progress_background=ff3300) |
+| Puzzle | ![](https://progress-bar.xyz/14?title=java&scale=20&suffix=/20&progress_background=ff3300) |
 | :---: | :---: |
 |[1](https://i18n-puzzles.com/puzzle/1)|[👑](src/main/java/com/github/pareronia/i18n_puzzles/Puzzle2025_01.java)|
 |[2](https://i18n-puzzles.com/puzzle/2)|[👑](src/main/java/com/github/pareronia/i18n_puzzles/Puzzle2025_02.java)|
@@ -15,7 +15,7 @@
 |[10](https://i18n-puzzles.com/puzzle/10)|[👑](src/main/java/com/github/pareronia/i18n_puzzles/Puzzle2025_10.java)|
 |[11](https://i18n-puzzles.com/puzzle/11)|[👑](src/main/java/com/github/pareronia/i18n_puzzles/Puzzle2025_11.java)|
 |[12](https://i18n-puzzles.com/puzzle/12)|[👑](src/main/java/com/github/pareronia/i18n_puzzles/Puzzle2025_12.java)|
-|[13](https://i18n-puzzles.com/puzzle/13)||
+|[13](https://i18n-puzzles.com/puzzle/13)|[👑](src/main/java/com/github/pareronia/i18n_puzzles/Puzzle2025_13.java)|
 |[14](https://i18n-puzzles.com/puzzle/14)||
 |[15](https://i18n-puzzles.com/puzzle/15)||
 |[16](https://i18n-puzzles.com/puzzle/16)||

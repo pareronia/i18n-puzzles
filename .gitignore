@@ -36,6 +36,7 @@ bin-test/
 .project
 .classpath
 .pydevproject
+/target/
 
 ##
 ## Java
