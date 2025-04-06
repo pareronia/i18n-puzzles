@@ -1,7 +1,7 @@
 import sys
+import zoneinfo
 from datetime import datetime
 
-from dateutil.tz import gettz
 from i18n_puzzles.common import InputData
 from i18n_puzzles.common import SolutionBase
 from i18n_puzzles.common import i18n_puzzles_samples
@@ -33,7 +33,7 @@ class Solution(SolutionBase[Output]):
             for i, e in enumerate(
                 int(
                     datetime.strptime(line[42:], "%b %d, %Y, %H:%M")
-                    .replace(tzinfo=gettz(line.split()[1]))
+                    .replace(tzinfo=zoneinfo.ZoneInfo(line.split()[1]))
                     .timestamp()
                     // 60
                 )
