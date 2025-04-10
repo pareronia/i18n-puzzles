@@ -3,6 +3,7 @@ from __future__ import annotations
 import time
 from abc import ABC
 from abc import abstractmethod
+from pathlib import Path
 from typing import Any
 from typing import Callable
 from typing import Generic
@@ -65,6 +66,11 @@ class SolutionBase(ABC, Generic[OUTPUT]):
 
     def __init__(self, puzzle: int):
         self.puzzle = Puzzle(puzzle)
+
+    def get_resource(self, path: Path) -> Path:
+        return Path(__file__).parent.parent.parent.joinpath(
+            "resources", str(self.puzzle.puzzle), path
+        )
 
     @abstractmethod
     def samples(self) -> None:
