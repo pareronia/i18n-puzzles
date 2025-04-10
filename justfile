@@ -18,6 +18,8 @@ export PYTHONPATH := python_src_dir
 python := if os_family() == "windows" { "python -O" } else { "python3 -O" }
 python_dev := if os_family() == "windows" { "python" } else { "python3" }
 
+resources_dir := join(".", "src", "main", "resources")
+
 rmdir := "rm --recursive --force"
 maven_repo := "https://repo1.maven.org/maven2"
 wget := "wget --no-verbose --no-clobber"
@@ -33,6 +35,7 @@ get-java-libs:
 [group("java")]
 build-java: get-java-libs
     @{{javac}} -cp "{{java_libs}}" -d "{{java_dst}}" {{java_srcs}}
+    @cp --recursive "{{resources_dir}}"/* "{{java_dst}}"
 
 [group("java")]
 run-java year day:
