@@ -14,7 +14,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
-import java.util.stream.IntStream;
 
 import com.github.pareronia.i18n_puzzles.common.Sample;
 import com.github.pareronia.i18n_puzzles.common.Samples;
@@ -68,29 +67,35 @@ public class Puzzle2025_15 extends SolutionBase<Integer>{
             public boolean outsideWorkHours(final LocalTime lt) {
                 return lt.isBefore(START_OF_DAY) || lt.isAfter(END_OF_DAY);
             }
-
-            public IntStream minutes(final boolean is24) {
-                return IntStream.range(START, END)
-                    .filter(i -> {
-                        final var ldt = LocalDateTime.ofInstant(
-                                Instant.ofEpochSecond(i * 60), zone);
-                        return !dayOff(ldt.toLocalDate())
-                            && !(!is24 && outsideWorkHours(ldt.toLocalTime()));
-                    });
-            }
         }
 
         final var blocks = Utils.toBlocks(input);
-        final var provided = new boolean[END - START];
-        blocks.get(0).stream()
-            .flatMapToInt(line -> Entity.fromInput(line).minutes(false))
-            .forEach(m -> provided[m - START] = true);
-        final int[] overtimes = blocks.get(1).stream()
-            .mapToInt(line -> (int) Entity.fromInput(line).minutes(true)
-                                .filter(m -> !provided[m - START]).count())
-            .toArray();
-        return Arrays.stream(overtimes).max().getAsInt()
-                - Arrays.stream(overtimes).min().getAsInt();
+        final var offices = blocks.get(0).stream().map(Entity::fromInput).toList();
+        final var clients = blocks.get(1).stream().map(Entity::fromInput).toList();
+        final int[] overtimes = new int[clients.size()];
+        for (int m = START; m < END;) {
+            boolean provided = false;
+            for (final Entity office : offices) {
+                final var ldt = LocalDateTime.ofInstant(
+                        Instant.ofEpochSecond(m * 60), office.zone);
+                if (!office.dayOff(ldt.toLocalDate())
+                        && !office.outsideWorkHours(ldt.toLocalTime())) {
+                    provided = true;
+                    break;
+                }
+            }
+            for (int j = 0; j < clients.size(); j++) {
+                final Entity client = clients.get(j);
+                final var ldt = LocalDateTime.ofInstant(
+                        Instant.ofEpochSecond(m * 60), client.zone);
+               if (!client.dayOff(ldt.toLocalDate()) && !provided) {
+                   overtimes[j] += 30;
+               }
+            }
+            m += 30;
+        }
+        Arrays.sort(overtimes);
+        return overtimes[overtimes.length - 1] - overtimes[0];
     }
 
     @Override
