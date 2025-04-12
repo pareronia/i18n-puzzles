@@ -5,6 +5,7 @@ description = "Internationalization Puzzles"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "bcrypt>=4.3.0",
     "prettyprinter>=0.18.0",
     "termcolor>=2.5.0",
     "tzdata>=2025.2",
